@@ -9,11 +9,18 @@ import { Revenue } from '@/app/lib/definitions';
 // https://www.chartjs.org/
 // https://airbnb.io/visx/
 
+interface RevenueChartProps {
+  revenue: Revenue[];
+  totalRevenue: number;
+}
+
 export default async function RevenueChart({
   revenue,
-}: {
-  revenue: Revenue[];
-}) {
+  totalRevenue
+}: RevenueChartProps) {
+
+  console.log('totalRevenue', totalRevenue)
+
   const chartHeight = 350;
   // NOTE: Uncomment this code in Chapter 7
 
